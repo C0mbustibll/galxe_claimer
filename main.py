@@ -33,7 +33,7 @@ def check_claim_data(claim_nft_data,INFO_NFT,ADDRESS):
     if claim_nft_data['data'].get('prepareParticipate').get('allow') ==False :
         if claim_nft_data['data'].get('prepareParticipate').get('disallowReason') == 'Exceed limit, available claim count is 0':
             logger.info(
-                f"CLAIM | ALREADY CLAIMED | {INFO_NFT[-2]} | {ADDRESS} ")
+                f"CLAIM | INFO | {INFO_NFT[-2]} | {ADDRESS} | Exceed limit, available claim count is 0")
             return True
         logger.info(f"CLAIM | FAILED | {INFO_NFT[-2]} | {ADDRESS} | {claim_nft_data['data']['prepareParticipate']['disallowReason']}")
         return True
