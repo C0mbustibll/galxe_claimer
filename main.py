@@ -3,8 +3,8 @@ import datetime
 from sys import stderr
 from web3.auto import w3
 import os
-
 from loguru import logger
+
 from galxy import \
     Gasless, \
     Galxy, \
@@ -122,7 +122,7 @@ async def work():
 
     await asyncio.gather(*claim_work)
 
-
+# ***********************************************************************************************************
 
 logger.remove()
 logger.add(stderr,
@@ -144,6 +144,9 @@ task_path = os.path.abspath('data_file/task.txt')
 with open(task_path, 'r') as f:
     task_list = [i for i in [i.strip() for i in f] if i != '']
 
+# ***********************************************************************************************************   
+    
+    
 async def main():
     assert len(key_list) > 0, 'Add private key key.txt'
     assert len(task_list) > 0, 'Add campaign id task.txt | format galxe.com/perp/campaign/XXXXXX OR GCUEJK'
