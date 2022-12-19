@@ -1,4 +1,4 @@
-## Galaxe claimer
+## Galxy claimer
 The script claimed the reward for you!
 
 ## Data_file
